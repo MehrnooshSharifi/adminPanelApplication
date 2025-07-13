@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IRANYekanMedium";
+  background-color: #fff;
+  font-size: 62.5%;
+  direction: rtl;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+@font-face {
+  font-family: "IRANYekanMedium";
+  src: url("../public/assets/font/IRANYekanXFaNum-Medium.woff")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "iranyekanEnNumBold";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../public/assets/font/IRANYekanXNoEn-Bold.woff") format("woff");
+}
+
+label:has(+ input:focus) {
+  color: #0050e5;
+}
+label:has(+ textarea:focus) {
+  color: #0050e5;
+}
+textarea:focus {
+  outline: none;
+  border: 2px solid #0050e5;
+}
+input:focus {
+  outline: none;
+  border: 2px solid #0050e5;
+}
+input:hover,
+textarea:hover {
+  background-color: #fafafa;
+}
+textarea {
+  resize: none;
+}
+
+.MuiPagination-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.MuiPaginationItem-root {
+  font-size: 14px !important ;
+  font-family: "IRANYekanMedium" !important;
+}
+.MuiPaginationItem-root:active {
+  font-size: 16px !important ;
+  font-family: "IRANYekanMedium" !important;
+}
+.MuiPaginationItem-root :hover {
+  background-color: #ccc;
+}
+.MuiPaginationItem-icon {
+  font-size: 14px;
+}
+
+.MuiPaginationItem-icon:hover {
+  background: transparent;
+}
+
+.MuiNativeSelect-icon {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .MuiPaginationItem-root {
+    font-size: 18px !important ;
+    font-family: "IRANYekanMedium" !important;
+  }
+  input {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .MuiPaginationItem-root {
+    font-size: 14px !important ;
+    font-family: "IRANYekanMedium" !important;
+    margin-right: -5px !important;
+  }
+  .MuiPaginationItem-icon {
+    font-size: 12px !important;
+  }
+  input {
+    font-size: 16px;
+  }
+  body {
+    overflow-y: scroll;
+  }
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-button {
+    height: 120px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fafafa;
+    width: 5px;
+    border-radius: 5px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+@media screen and (min-width: 769px) {
+  ::-webkit-scrollbar-button {
+    height: 160px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fafafa;
+    width: 5px;
+    border-radius: 5px;
+  }
+}
+.MuiTooltip-tooltip {
+  font-family: "IRANYekanMedium" !important;
+  font-size: 12px !important;
+  line-height: 24px !important;
+  background-color: #212121 !important;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  color: blue !important; /* Change the color */
+  font-size: 25px; /* Change the size */
+  cursor: pointer;
+}
+
+/* Style the spinner button */
+input[type="time"]::-webkit-inner-spin-button {
+  /* You can apply styles to the spinner button if needed */
+}
+
+.no-hover:hover {
+  background-color: inherit !important; /* Disable background color change */
+  border-color: #0050E5 !important; /* Disable border color change */
+  color: #0050E5 !important; /* Disable text color change */
+}
